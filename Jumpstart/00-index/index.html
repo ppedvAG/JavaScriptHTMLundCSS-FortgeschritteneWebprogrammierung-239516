@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--
+    <tagname> Inhalte </tagname>
+    Starttag  Content   Endtag
+
+    Tagname sind nicht case-sensitive
+    Konvention ist es aber die Tagnamen klein zu schreiben 
+    Tags sind verschachtelbar
+
+-->
+
+
+<html>
+    <head>
+        <!--
+            der head enthält Metainformationen über unsere Seite, wie z.B den Titel, Stylesheet und Skripte
+        -->
+
+        <!-- Was im Tab als Namen angezeigt wird oder bei der Google Suche -->
+        <title>
+          erste HTML Seite
+        </title>
+        <meta charset="utf-8">
+        <!-- Weist den Browser welcher encodierung verwendet werden soll -->
+
+        <meta name="description" content="Ich bin der Text, der in der Google Suche unter dem Title steht">
+        
+
+    </head>
+    <body>
+        <!--
+            der body enthält den tatsächlichen sichtbaren Inhalt unserer Seite
+            Darf nur einmal pro HTML Dokument vorkommen
+        -->
+
+        <div>
+            <!-- steht für division, also eine Unterteilung -->
+            <!-- Benutzt man um die Seite in einzelne Bereiche aufzugliedern, z.B in eine Navigationsleiste
+            und den tatsächlichen Inhalt-->
+            <ul>
+                <!-- Steht für ungeordnete Liste und wird standardmäßig als Liste mit
+                     aufzählungspunkten dargestellt -->
+                     <li>
+                        <!-- Steht für List-item und ist ein Aufzählungspunkt -->
+                        <!-- Im Falle einer Navigationsleiste enthält das list item anchor tags -->
+                        <a href="#">Home</a>
+                       <!-- ein anchor tag verlinkt immer auf eine andere Seite, kann sowohl auf unser eigenen Website sein
+                        oder auf eine andere Domain z.B wikipedia.de -->
+                        <!-- Der a-Tag muss über das href-Attribut verfügen -->
+                     </li>
+                     <li>
+                        <a href="https:wikipedia.org/wiki/Wikipedia:Hauptseite">externe Seite</a>
+                        <!-- Bei externen Seiten muss mit dem absolutem Pfad gearbeitet werden -->
+                     </li>
+                     <li>
+                        <a href="/00-index/aboutme.html">Interne Seite</a>
+                     </li>
+            </ul>
+
+        </div>
+        <div>
+            <h1>Ich bin die Hauptüberschrift der Seite</h1>
+            <!-- Die h*-Tags gibt es von h1(größte)-h6(kleinste) -->
+            <!-- Sie werden immer fett geschrieben und je nach Zahl unterschiedlich groß -->
+            <!-- h1 sollte nur ein einziges mal pro html Dokument verwendet werden -->
+            <h6>Ich bin eine der unwichtigsten Überschriften</h6>
+
+            <h2>Texte in HTML</h2>
+            <p style="background-color: aquamarine;">Ich bin ein Paragraph</p>
+            <span style="background-color: cadetblue;">Ich bin eine Zeichenfolge</span>
+            <p>Unterschied zwischen p und span ist die Darstellung. 
+                Der P-Tag erzwingt immer eine neue Zeile, weil er standardmäßig eine 
+                ganze Zeile an Platz beansprucht
+            </p>
+            <span>Der span-Tag verbraucht nur so viel Platz wie er tatsächlich beansprucht. </span>
+            <span>
+                Ich werde nicht in einer neuen Zeile stehen.
+            </span>
+            <p>Unnötige Leerzeichen werden gelöscht         sadsfsdf            sadsad</p>
+            <span> Test             
+                Test<br> asdasdsa     sddd</span>
+
+            <h3>Ausnahme: </h3>
+            <pre>
+                Beim pre-Tag, was für preformatted Text steht, wird die Formatierung       bei
+                            behalten
+                
+                            wie
+                    Man
+                Sehen kann
+            </pre>
+        </div>
+        <h3 title="Tooltip">Kleines Gimmik: </h3>
+        <p title="Ich bin ein Tooltip"> Man kann bei allen Elementen Tooltips mit dem title-Attribut darstellen
+            also hover über mich.
+        </p>
+
+        <h3>Styling von Text mittels HTML: </h3>
+        <p><strong>Um Text fett darzustellen haben wird den strong-Tag</strong> und <em>um Text kursiv darzustellen
+            haben wir den em-Tag
+        </em></p>
+        <p>Früher wurde statt dem strong-Tag den b-Tag verwendet und statt em wurde der i-Tag verwendet</p>
+        <p>Im Gegensatz zum b und i tag werden der strong und em tag von Screenreadern besonders betont.</p>
+        <p>Der i-Tag wird heutzutage oft als icon-Tag verwendet</p>
+
+        <p>Zitate: </p>
+        <blockquote>Ich bin für längere Zitate gedacht</blockquote>
+        <q>Ich bin für kurze Zitate gedacht</q>
+
+        <p>Abkürzung:</p>
+        <abbr title="Hyper Text Markup Language">HTML</abbr>
+
+        <p>Titel und ähnliches</p>
+        <cite>Ich bin ein Buch/Filmtitel</cite>
+
+        <p>Adressen:</p>
+        <address>1000 Musterstadt</address>
+
+        <p>Sub-/Superskript</p>
+        <p>Für Hochzahlen:</p>
+        <p>2<sup>4</sup></p>
+        <p>Für Fußnoten:</p>
+        <p>Quelle<sub>Fußnote</sub></p>
+
+        <p>Rechtliche Hinweise:</p>
+        <small>Ich werde kleiner dargestellt als normaler Text</small>
+
+        <p>Farbliche Markierung:</p>
+        <mark>Ich werde gelb hinterlegt</mark>
+
+        <div>
+            <h2>Listen in HTML</h2>
+            <h3>Die ungeordnete Liste</h3>
+            <ul>
+                <li>ABC</li>
+                <li>DEF</li>
+                <li>XYZ</li>
+                    <ul>
+                        <li>Unterpunkt</li>
+                    </ul>
+            </ul>
+            <h3>Die geordnete Liste</h3>
+            <p>Dient ebenfalls der Auflistung, diesmal allerdings von Einzelschritten oder von Rankings</p>
+            <ol>
+                <li>Mehl</li>
+                <li>Eier</li>
+                <li>Milch</li>
+                <li>Getränke
+                    <ol>
+                        <li>Cola
+                            <ol>
+                                <li>Light</li>
+                                <li>Zero</li>
+                            </ol>
+                        </li>
+                        <li>Wasser
+                            <ol>
+                                <li>Mit Kohlensäure</li>
+                                <li>Ohne Kohlensäure</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h4>Die Attribute des ol-Elements</h4>
+            <ol>
+                <li>type</li>
+                <li>start</li>
+                <li>reversed</li>
+            </ol>
+
+            <p>Wir können diese Attribute beliebig mischen</p>
+
+            <ol type="a">
+                <li>1</li>
+                <li>2</li>
+            </ol>
+
+            <p>Mögliche Werte für type:</p>
+
+            <ul>
+                <li>A - Zählt mit Großbuchstaben durch</li>
+                <li>a - Zählt mit Kleinbuchstaben durch</li>
+                <li>I - Zählt mit großgeschriebenen Römischen Zahlen durch</li>
+                <li>i - Zählt mit kleingeschriebenen Römischen Zahlen durch</li>
+                <li>1 - Zählt mit arabischen Ziffern durch, ist standard</li>
+            </ul>
+
+            <p>Start: </p>
+            <p>Sagt wo das Zählen beginnen soll</p>
+            <ol type="1" start="54">
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+            <p>Reversed: </p>
+            <ol type="1" start="54" reversed>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+            </ol>
+
+            <h3>Die description List:</h3>
+            <p>Die dl dient nicht der Aufzählung, sondern dient der Definition von Begriffen</p>
+            <p>Die dl enthält dt - description term und dd - description detail - Elemente</p>
+            <p>Dabei ist der dt-Tag der BEgriff, der beschrieben wird und dd ist die Beschreibung</p>
+
+            <dl>
+                <dt>HTML</dt>
+                <dd>Die meistverbreitete Markuplanguage im Netz </dd>
+                <dt>JavaScript</dt>
+                <dd>die meistbenutzte Programmiersprache im Web</dd>
+            </dl>
+
+            <h2>Tabellen in HTML</h2>
+            <table>
+                <!-- Definiert den Anfang und das Ende einer Tabelle -->
+                <thead>
+                    <!--Enthält Informationen über die Tabelle, wie z.B. die Legende -->
+                    
+                    <!--Erzeugt neue Zeile-->
+                <tr>
+                    <th scope="col">Produkte</th>
+                    <!-- scope Attribut
+                        Das scope-Attribut definiert ob die Überschrift für eine Spalte oder eine Zeile
+                    gilt
+                    Mögliche Werte:
+                        col
+                        row
+                    Richtet sich an Screenreader
+                -->
+                    <th scope="col">Anzahl</th>
+                    <th scope="col">Stückpreis</th>
+                    <th scope="col">Gesamtpreis</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <!--Enthält die tatsächlichen Daten der Tabelle-->
+                    <tr>
+                        <th scope="row">Laptop</th>
+                        <td>5</td>
+                        <td>1.500€</td>
+                        <td>7.500€</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Monitor</th>
+                        <td>5</td>
+                        <td>200€</td>
+                        <td>1.000€</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Preis insgesamt:</th>
+                        <td>8.500€</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a href="#last-chapter">Gehe zum letzten Kapitel</a>
+            <a href=".chapter-heading">...</a>
+        </div>
+
+        <div>
+            <h2>Bilder in HTML</h2>
+            <p>Wir haben zwei Möglichkeiten Bilder in HTML darzustellen</p>
+            <p>DIe klassische Variante ist die Verwendung des img-Tags</p>
+            <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+            <p>Der img-Tag sollte über die Attribute href(Pfad/Link zum Bild) sowie alt(kurze
+                Beschreibung des Bildes)
+            </p>
+            <p>Platzerbilder: https://via.placeholder.com/BreitexHöhe</p>
+            <p>Moderne Alternative zu img-Tag ist der picture-Tag</p>
+            <picture>
+                <source media="(min-width: 750px)" srcset="https://via.placeholder.com/750x750">
+                <source media="(min-width: 450px)" srcset="https://via.placeholder.com/450x450">
+                <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+            </picture>
+            <p>Der picture-Tag selber hat keine Attribute, beinhaltet aber mindestens ein Source-Tag
+                und ein img-Tag, der immer als letztes geschrieben wird
+                Wir gehen dabei vom größten zum kleinsten Bild
+                Der Browser prüft von oben nach unten durch ob das benutzte Gerät die Bedingungen erfüllt
+                und stellt das entsprechende Element dar. Wenn keine der Bedingungen (Inhalt von media)
+                erfüllt wird nimmt der den img-Tag. Falls der Browser den picture Tag nicht unterstützt
+                wird ebenfalls der img-Tag verwendet
+            </p>
+            <p>Falls eines der Bilder in den Source-Tags nicht geladen werden kann, wird der
+                alt-Text vom img-Tag dargestellt
+            </p>
+        </div>
+        <div>
+            <h2 class="chapter-heading">Videos in HTML</h2>
+            <p>Der video-Tag funktioniert recht ähnlich wie der picture-Tag, d.h. auch hier umschließt 
+                der video tag eins oder mehrere source tags 
+                Diesmal definieren die source-Tags aber die Dateiendung des Videos und der Browser nimmt sich
+                das erste kompatible Format 
+            </p>
+
+            <video muted controls poster="https://via.placeholder.com/320x180">
+                <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+                <source src="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
+            </video>
+            <h3>Attribute des video-Tags</h3>
+            <ul>
+                <li>autoplay - Boolesches Attribut, das Video wird automatisch abgespielt</li>
+                <li>muted - Boolesches Attribut, das Video wird standardmäßig stumm abgespielt</li>
+                <li>controls - Boolesches Attribut, stellt eine Benutzeroberfläche für das Video zur verfügung</li>
+                <li>loop - Boolesches Attribut, lässt das Video nach durchlauf erneut beginnen</li>
+                <li>poster - Bild das dargestellt wird, wenn das Video nicht gestartet wurde,
+                    Wert entpsricht Pfad/Link zum Bild
+                </li>
+            </ul>
+            <a href="https://en.wikipedia.org/wiki/HTML5_video#Browser_support">unterstützte Formate nach Browser</a>
+        </div>
+        <div>
+            <h2 class="chapter-heading">Das class-Attribut</h2>
+            <p>Ermöglicht es uns einen oder mehreren HTML-Elementen eine Klasse zu geben. Die hat vorerst
+                keinerlei Auswirkungen auf die betroffenen Elemente. Klassen geben uns die Möglichekeit eins oder
+                mehrere Elemente in CS gezielter zu stylen bzw. diese gezielt in JavaScript anzusprechen.
+            </p>
+            <h3>Best Practice: </h3>
+            <ul>
+                <li>Klasse sollte Funktion des Elements beschreiben</li>
+                <li>Klasse sollte kleingeschrieben sein</li>
+                <li>Klasse sollte nach Kebab-Case geschrieben werden(früher)</li>
+                <li>Kebab-Case: erste-zweite-dritte</li>
+                <li>Klassen werden mit camelCase geschrieben(heute)</li>
+                <li>camelCase: ersteZweiteDritte</li>
+                <li>ACHTUNG: Klassennamen ist case-sensitive, d.h. Groß-, Kleinschreibung ist wichtig</li>
+            </ul>
+            <h2 id="last-chapter">Das id-Attribut</h2>
+            <p>Dient ebenfalls dem gezielteren Styling bzw ansprechen per JavaScript.
+                Sollte einzigartig sein pro HTML-Seite 
+            </p>
+            <p>Es gelten die selben Best Practice Konventionen wie bei den Klassen</p>
+            <p>Können mit Klassen gemischt werden</p>
+            <p>Kann auch in einem anchor-Tag verlinkt werden</p>
+            <a href="#chapter-heading">Gehe zum letzten Kapitel</a>
+            <p>Syntac: href="#id-name"</p>
+        </div>
+    </body>
+</html>
